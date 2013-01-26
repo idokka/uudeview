@@ -1,0 +1,225 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""uud32acx.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,2,0,0
+ PRODUCTVERSION 1,2,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "GNU Public Developer\0"
+            VALUE "CompanyName", "Michael Newcomb and Frank Pilhofer\0"
+            VALUE "FileDescription", "uud32acx ActiveX Control - V1.2\0"
+            VALUE "FileVersion", "1, 2, 0, 0\0"
+            VALUE "InternalName", "UUD32ACX\0"
+            VALUE "LegalCopyright", "Copyright (C) 1997, 2001 Michael Newcomb and Frank Pilhofer\0"
+            VALUE "LegalTrademarks", "-\0"
+            VALUE "OLESelfRegister", "Yes\0"
+            VALUE "OriginalFilename", "UUD32ACX.OCX\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "uud32acx ActiveX Control\0"
+            VALUE "ProductVersion", "1, 2, 0, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_UUDICO              ICON    DISCARDABLE     "uudeview.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_UUD32ACX            BITMAP  DISCARDABLE     "Uud32acxCtl.bmp"
+IDB_UUDBUTN             BITMAP  DISCARDABLE     "uudbutn.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX_UUD32ACX DIALOG DISCARDABLE  34, 22, 260, 73
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Uud-32 Control"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDI_UUDICO,IDC_STATIC,7,26,20,20
+    LTEXT           "Uud-32 ActiveX Control, Version 1.1",IDC_STATIC,40,10,
+                    139,8
+    LTEXT           "Copyright (C) 1997, Michael Newcomb and Frank Pilhofer",
+                    IDC_STATIC,40,25,170,8
+    DEFPUSHBUTTON   "OK",IDOK,221,29,32,14,WS_GROUP
+    LTEXT           "http://www.miken.com/uud\nhttp://www.uni-frankfurt.de/~fp/uudeview/",
+                    IDC_WEBPAGES,42,39,164,19
+END
+
+IDD_PROPPAGE_UUD32ACX DIALOG DISCARDABLE  0, 0, 250, 110
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&Fast Mode",IDC_FAST,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,7,47,8
+    CONTROL         "&Brackets before Parens",IDC_BRACK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,20,86,8
+    CONTROL         "&Verbose",IDC_VERBOSE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,33,88,8
+    CONTROL         "&Desperate Mode",IDC_DESP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,46,91,8
+    CONTROL         "&Ignore Re:plies",IDC_IGNREPLY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,103,7,89,8
+    CONTROL         "&Overwrite existing files",IDC_OVERWRITE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,103,20,95,8
+    CONTROL         "D&umb Mode",IDC_DUMB,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,103,33,54,10
+    CONTROL         "Auto Delete &X-Files",IDC_XFAUTO,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,103,46,74,8
+    LTEXT           "Output &Path:",IDC_STATIC,7,92,38,8
+    EDITTEXT        IDC_OPEDIT,46,89,194,12,ES_AUTOHSCROLL
+    CONTROL         "E&xtract Text Files",IDC_USETEXT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,58,92,10
+    CONTROL         "&Strict MIME",IDC_STRICTMIME,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,69,88,13
+    CONTROL         "&Remove input files",IDC_REMOVEAFTER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,103,57,105,13
+    CONTROL         "Strict Filenames",IDC_STRICTFN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,103,71,78,9
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX_UUD32ACX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 253
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 61
+    END
+
+    IDD_PROPPAGE_UUD32ACX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 240
+        TOPMARGIN, 7
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_UUD32ACX            "Uud32acx Control"
+    IDS_UUD32ACX_PPG        "Uud32acx Property Page"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_UUD32ACX_PPG_CAPTION "General"
+    IDS_BADFLS              "Illegal File List Subscript"
+    IDS_OOM                 "Out of memory."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "uud32acx.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

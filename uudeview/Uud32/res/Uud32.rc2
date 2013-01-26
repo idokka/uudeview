@@ -1,0 +1,111 @@
+//
+// UUD32.RC2 - resources Microsoft Visual C++ does not edit directly
+//
+
+#ifdef APSTUDIO_INVOKED
+	#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Add manually edited resources here...
+
+STRINGTABLE DISCARDABLE
+BEGIN
+
+	//
+	// Decode dialog Tool Tips
+	//
+	IDS_DECODEGO			"Preview it..."
+	IDS_DECODELIST			"List of files to decode"
+//	IDS_TOLABEL				""
+	IDS_DECODEPATHBROWSE	"Choose the directory to send files to"
+	IDS_DECODEOUTPUTLIST	"List of files found"
+	IDS_DECODEOPTIONS		"Set options"
+	IDS_CLEARDECODE			"Clear both lists"
+	IDS_ADDDECODE			"Add files to decode"
+	IDS_ADDCLIPBOARD		"Accumulate the contents of the Clipboard for decoding"
+	IDS_REMOVEDECODE		"Remove a file from the to-decode list (does not delete file on disk)"
+	IDS_REMOVEDECODEOUT		"Remove a file from the 'found' list"
+	IDS_RENAMEDECODEOUT		"Rename a file in the 'found' list"
+	IDS_DECODEINFO			"Get information from a file in the 'found' list"
+//	IDS_DECINFOBOX			""
+//	IDS_INFO1				""
+//	IDS_INFO2				""
+//	IDS_UUD32ACXCTRL1		""
+//	IDS_DECODEPROGRESS		""
+	IDS_DECODEPATH			"Directory to decode files into"
+
+	//
+	// Encode Dialog Tool Tips
+	//
+	IDS_ENCODEGO			"Encode the file"
+	IDS_ENCSRC				"The file to encode"
+	IDS_ENCSRCBROWSE		"Choose a file to encode"
+//	IDS_ENCINFO				""
+//	IDS_ENCPROG				""
+	IDS_ENC64				"Base64 (MIME-style) encoding"
+	IDS_ENCUU				"UU encoding (safest)"
+	IDS_ENCXX				"XX encoding"
+//	IDS_OMFRAME				""
+	IDS_ENCSINGLE			"Encode to a single file"
+	IDS_ENCBRK				"Encode to a series of files, breaking every n lines"
+	IDS_ENCCLIP				"Encode to the Clipboard"
+	IDS_ENCLINES			"Number of lines per file"
+	IDS_ENCDEST				"Destination filename"
+	IDS_ENCPATH				"Choose destination path"
+
+#if SKIP
+	IDS_UUD32ENCODE			""
+	IDS_FASTMODE			""
+	IDS_DUMBMODE			""
+	IDS_BRACKPOL			""
+	IDS_DESP				""
+	IDS_IGNREPLY			""
+	IDS_OWRITEFILE			""
+	IDS_POE					""
+	IDS_DEBUG				""
+	IDS_ETEXT				""
+	IDS_DECOPTDEFAULT		""
+	IDS_DECOPTHELP			""
+	IDS_ASSOC				""
+
+// IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 217, 55
+
+	IDS_TAB2		""
+	IDS_ABOUTBUTTON		""
+	IDS_DEBUGCLEARBUTTON		""
+
+// IDD_INFODIALOG DIALOG DISCARDABLE  0, 0, 249, 147
+
+	IDS_INFOHELP		""
+	IDS_INFOTITLE		""
+	IDS_INFOEDIT		""
+
+// IDD_DEBUGDIALOG DIALOG DISCARDABLE  0, 0, 249, 147
+
+	IDS_CLEARDEBUG		""
+	IDS_DEB2CLIP		""
+	IDS_INFOHELP		""
+	IDS_INFODEBUG		""
+
+// IDD_RENAMEDIALOG DIALOG DISCARDABLE  0, 214, 185, 55
+
+	IDS_RENFILENAME		""
+	IDS_RENBUTTON		""
+	IDS_RENOWBUTTON		""
+	IDS_RENSKIPBUTTON		""
+
+// IDD_LAUNCHDIALOG DIALOG DISCARDABLE  65, 40, 246, 63
+
+	IDS_LAUNCHLIST		""
+	IDS_LAUNCHBROWSE		""
+	IDS_LAUNCHALL		""
+	IDS_LAUNCHHELP		""
+	IDS_LAUNCHNAME		""
+	IDS_UUD32ACXCTRL1		""
+	IDS_UUD32ENCODE		""
+#endif
+END
+
+/////////////////////////////////////////////////////////////////////////////

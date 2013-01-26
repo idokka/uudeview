@@ -1,0 +1,367 @@
+// UudATL.idl : IDL source for UudATL.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (UudATL.tlb) and marshalling code.
+
+//
+// Include all the help constants
+//
+
+#include "..\uud32acx\hlp\Events.hh"
+#include "..\uud32acx\hlp\Methods.hh"
+#include "..\uud32acx\hlp\Properties.hh"
+#include "..\uud32acx\hlp\UUD32ACX.hh"
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(60100074-531F-4D3A-A2B1-3941BE5828B0),
+		dual,
+		helpstring("UUDeview Engine Interface"),
+		pointer_default(unique)
+	]
+	interface IUUEngine : IDispatch
+	{
+		[propget, id(1), helpcontext(Bracket_Policy_Property), helpstring("Part numbers in brackets before part numbers in parens")] HRESULT BracketPolicy([out, retval] BOOL *pVal);
+		[propput, id(1), helpcontext(Bracket_Policy_Property), helpstring("Part numbers in brackets before part numbers in parens")] HRESULT BracketPolicy([in] BOOL newVal);
+		[propget, id(2), helpcontext(Desperate_Mode_Property), helpstring("Decode all available data, correct or not")] HRESULT Desperate([out, retval] short *pVal);
+		[propput, id(2), helpcontext(Desperate_Mode_Property), helpstring("Decode all available data, correct or not")] HRESULT Desperate([in] short newVal);
+		[propget, id(3), helpcontext(Dumb_Mode_Property), helpstring("All parts assumed to be in correct order")] HRESULT Dumb([out, retval] BOOL *pVal);
+		[propput, id(3), helpcontext(Dumb_Mode_Property), helpstring("All parts assumed to be in correct order")] HRESULT Dumb([in] BOOL newVal);
+		[propget, id(4), helpcontext(Fast_Mode_Property), helpstring("Expect only one part per file")] HRESULT FastMode([out, retval] BOOL *pVal);
+		[propput, id(4), helpcontext(Fast_Mode_Property), helpstring("Expect only one part per file")] HRESULT FastMode([in] BOOL newVal);
+		[propget, id(5), helpcontext(Ignore_Reply_Property), helpstring("Ignore messages and posts sent as replies")] HRESULT IgnoreReply([out, retval] BOOL *pVal);
+		[propput, id(5), helpcontext(Ignore_Reply_Property), helpstring("Ignore messages and posts sent as replies")] HRESULT IgnoreReply([in] BOOL newVal);
+		[propget, id(6), helpcontext(Overwrite_Property), helpstring("Control can overwrite files on output")] HRESULT Overwrite([out, retval] BOOL *pVal);
+		[propput, id(6), helpcontext(Overwrite_Property), helpstring("Control can overwrite files on output")] HRESULT Overwrite([in] BOOL newVal);
+		[propget, id(7), helpcontext(RemoveAfter_Property), helpstring("Remove files consumed by decode operation")] HRESULT RemoveAfter([out, retval] BOOL *pVal);
+		[propput, id(7), helpcontext(RemoveAfter_Property), helpstring("Remove files consumed by decode operation")] HRESULT RemoveAfter([in] BOOL newVal);
+		[propget, id(8), helpcontext(StrictMIME_Property), helpstring("Force strict MIME compliance")] HRESULT StrictMIME([out, retval] BOOL *pVal);
+		[propput, id(8), helpcontext(StrictMIME_Property), helpstring("Force strict MIME compliance")] HRESULT StrictMIME([in] BOOL newVal);
+		[propget, id(9), helpcontext(IDH_UseText_Property), helpstring("Decode MIME text files")] HRESULT UseText([out, retval] BOOL *pVal);
+		[propput, id(9), helpcontext(IDH_UseText_Property), helpstring("Decode MIME text files")] HRESULT UseText([in] BOOL newVal);
+		[propget, id(10), helpcontext(Verbose_Property), helpstring("Report debugging information")] HRESULT Verbose([out, retval] BOOL *pVal);
+		[propput, id(10), helpcontext(Verbose_Property), helpstring("Report debugging information")] HRESULT Verbose([in] BOOL newVal);
+		[propget, id(11), helpcontext(X_File_Auto_Property), helpstring("Automatically execute deferred delete")] HRESULT XFileAuto([out, retval] BOOL *pVal);
+		[propput, id(11), helpcontext(X_File_Auto_Property), helpstring("Automatically execute deferred delete")] HRESULT XFileAuto([in] BOOL newVal);
+		[propget, id(12), helpcontext(Output_Path_Property), helpstring("Set default output path")] HRESULT OutputPath([out, retval] BSTR *pVal);
+		[propput, id(12), helpcontext(Output_Path_Property), helpstring("Set default output path")] HRESULT OutputPath([in] BSTR newVal);
+		[propget, id(13), helpcontext(Library_Version_Property), helpstring("Current version of UUDeview library")] HRESULT LibVersion([out, retval] BSTR *pVal);
+		[propput, id(13), helpcontext(Library_Version_Property), helpstring("Current version of UUDeview library")] HRESULT LibVersion([in] BSTR newVal);
+		[propget, id(14), helpcontext(DFile_Property), helpstring("Read the name of an encoded file found during loading")] HRESULT DFile([in] short row, [out, retval] BSTR *pVal);
+		[propput, id(14), helpcontext(DFile_Property), helpstring("Change the name of a encoded file")] HRESULT DFile([in] short row, [in] BSTR newVal);
+		[propget, id(15), helpcontext(DFCount_Property), helpstring("Number of files in Decode list")] HRESULT DFCount([out, retval] short *pVal);
+		[propput, id(15), helpcontext(DFCount_Property), helpstring("Number of files in Decode list")] HRESULT DFCount([in] short newVal);
+		[propget, id(16), helpcontext(DFileFlags_Property), helpstring("Read uudFile---- flags on an encoded file")] HRESULT DFileFlags([in] short row, [out, retval] long *pVal);
+		[propput, id(16), helpcontext(DFileFlags_Property), helpstring("Set uudFile---- flags on an encoded file")] HRESULT DFileFlags([in] short row, [in] long newVal);
+		[id(17), helpcontext(IDH_DLoad_Method), helpstring("Load an encoded file for later decoding")] HRESULT DLoad([in] BSTR toLoad, [out, retval] long *retVal);
+		[id(18), helpcontext(IDH_DFileTo_Method), helpstring("Decode a file to a specific name")] HRESULT DFileTo([in] short row, [in] BSTR outname, [out, retval] long *retVal);
+		[propget, id(19), helpcontext(Last_Message_Property), helpstring("Last message from engine")] HRESULT LastMessage([out, retval] BSTR *pVal);
+		[propput, id(19), helpcontext(Last_Message_Property), helpstring("Last message from engine")] HRESULT LastMessage([in] BSTR newVal);
+		[propget, id(20), helpcontext(DFileStatus_Property), helpstring("Text translation of encoded file status")] HRESULT DFileStatus([in] short row, [out, retval] BSTR *pVal);
+		[propput, id(20), helpcontext(DFileStatus_Property), helpstring("Text translation of encoded file status")] HRESULT DFileStatus([in] short row, [in] BSTR newVal);
+		[id(21), helpcontext(IDH_FileFilter_Method), helpstring("Remove dangerous characters from a filename")] HRESULT FileFilter([in] BSTR inFile, [out, retval] BSTR *outFile);
+		[id(22), helpcontext(IDH_QuickDecode_Method), helpstring("Decode a file and write the resulting files to a directory")] HRESULT QuickDecode([in] BSTR File2Decode, [in] BSTR OutputPath, [in] BOOL XFile, [out, retval] long *retVal);
+		[id(23), helpcontext(IDH_Reset_Method), helpstring("Set control to initial state")] HRESULT Reset();
+		[propget, id(24), helpcontext(DFileInfo_Property), helpstring("Read text info above encoded data")] HRESULT DFileInfo([in] short row, [out, retval] BSTR *pVal);
+		[propput, id(24), helpcontext(DFileInfo_Property), helpstring("Read text info above encoded data")] HRESULT DFileInfo([in] short row, [in] BSTR newVal);
+		[id(25), helpcontext(IDH_DRemove_Method), helpstring("Remove a file from the DFiles list")] HRESULT DRemove(short row);
+		[id(26), helpcontext(IDH_Encode_Method), helpstring("Encode a file")] HRESULT Encode([in] BSTR iname, [in] BSTR oname, [in] BSTR nameinfile, [in] long encoding, [in] long lines, [in] long headers, [in] VARIANT destvar, [in] VARIANT fromvar, [in] VARIANT subjectvar, [out, retval] long *retVal);
+		[id(27), helpcontext(IDH_XFileAdd_Method), helpstring("Add a file to the deferred-delete list")] HRESULT XFileAdd([in] BSTR toAdd, [out, retval] BOOL *retVal);
+		[id(28), helpcontext(IDH_XFileDel_Method), helpstring("Delete files on the deferred-delete list")] HRESULT XFileDel([out, retval] BOOL *retVal);
+		[propget, id(29), helpstring("Engine temporary folder")] HRESULT TempFolder([out, retval] BSTR *pVal);
+		[propput, id(29), helpstring("Engine temporary folder")] HRESULT TempFolder([in] BSTR newVal);
+		[id(30), helpstring("Last Operating System Error")] HRESULT LastOSError([out] long *errNo, [out] VARIANT *errText, [out, retval] BOOL *gotErr);
+		[id(31), helpstring("Calculate CRC32")] HRESULT CRC32([in] BSTR fileName, [out] long *crc, [out, retval] BOOL *retVal);
+		[id(32), helpstring("Exchange clipboard with file")] HRESULT ClipboardFile([in] long hWnd, [in] BSTR Filename, [in] short CFMode, [out, retval] BOOL *retVal);
+		[propget, id(33), helpcontext(DFileDetail_Property), helpstring("Get low-level detail about an encoded file")] HRESULT DFileDetail(short row, short itemno, short subscr, [out, retval] VARIANT *pVal);
+		[propput, id(33)] HRESULT DFileDetail(short row, short itemno, short subscr, [in] VARIANT newVal);
+		[propget, id(34), helpcontext(XFile_Property), helpstring("Read a member of the deferred-delete list")] HRESULT XFile([in] short row, [out, retval] BSTR *pVal);
+		[propput, id(34), helpcontext(XFile_Property), helpstring("Write a member of the deferred-delete list")] HRESULT XFile([in] short row, [in] BSTR newVal);
+		[propget, id(35), helpcontext(XFileCount_Property), helpstring("Number of files in deferred-delete list")] HRESULT XFileCount([out, retval] short *pVal);
+		[propput, id(35), helpcontext(XFileCount_Property), helpstring("Number of files in deferred-delete list")] HRESULT XFileCount([in] short newVal);
+		[id(36), helpstring("Create a temporary filename")] HRESULT CreateTempName([out, retval] BSTR *tempFilename);
+		[id(37), helpstring("Load a buffer or string")] HRESULT LoadBuffer([in] VARIANT buffer, [out] VARIANT *tempName, [out, retval] BOOL *retVal);
+		[propget, id(38), helpstring("Strict filename parsing")] HRESULT StrictFilenames([out, retval] BOOL *pVal);
+		[propput, id(38), helpstring("Strict filename parsing")] HRESULT StrictFilenames([in] BOOL newVal);
+	};
+
+[
+	uuid(B2BBD34E-7348-4C7C-A355-63EA0E99A3ED),
+	version(1.0),
+	helpstring("UudATL 1.0 Type Library")
+]
+library UUDATLLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	//
+	// UUD32 constants
+	//
+
+	[ uuid(971609AE-2325-4905-89FD-11976AE6644E),
+	  helpcontext(Messages_Constants), 
+      helpstring("Message Severity Levels") ]
+	typedef enum {			// Message types
+		[ helpcontext(Messages_Constants), helpstring("Message only") ]
+		uudMsgMessage = 0,	/* just a message, nothing important */
+
+		[ helpcontext(Messages_Constants), helpstring("Information") ]
+		uudMsgNote = 1,		/* something that should be noticed */
+
+		[ helpcontext(Messages_Constants), helpstring("Important message, processing continues") ]
+		uudMsgWarning =	2,	/* important msg, processing continues */
+
+		[ helpcontext(Messages_Constants), helpstring("Error, processing stopped") ]
+		uudMsgError = 3,	/* processing has been terminated */
+
+		[ helpcontext(Messages_Constants), helpstring("Decoder has crashed, no further commands accepted") ]
+		uudMsgFatal = 4,	/* decoder cannot process further requests */
+
+		[ helpcontext(Messages_Constants), helpstring("Severe crash.  Owner should shut down") ]
+		uudMsgPanic = 5		/* recovery impossible, app must terminate */
+		} Messages;
+
+	[ uuid(7B396FA0-66CF-4373-B0D6-1E278D5D96B6),
+	  helpcontext(H_RETCODE), 
+      helpstring("Return Status Codes") ]
+	typedef enum {			// Return Codes
+		[ helpcontext(H_RETCODE), helpstring("Operation completed successfully") ]
+		uudRetOK = 0,		/* everything went fine */
+
+		[ helpcontext(H_RETCODE), helpstring("I/O Error (Disk full, etc.)") ]
+		uudRetIOErr = 1,	/* I/O Error - examine errno */
+
+		[ helpcontext(H_RETCODE), helpstring("Out of memory") ]
+		uudRetNoMem = 2,	/* not enough memory */
+
+		[ helpcontext(H_RETCODE), helpstring("Illegal parameter") ]
+		uudRetIllVal = 3,	/* illegal value for operation */
+
+		[ helpcontext(H_RETCODE), helpstring("No data found to decode") ]
+		uudRetNoData = 4,	/* decoder didn't find any data */
+
+		[ helpcontext(H_RETCODE), helpstring("No proper end found") ]
+		uudRetNoEnd = 5,	/* encoded data wasn't ended properly */
+
+		[ helpcontext(H_RETCODE), helpstring("Unsupported encoding method") ]
+		uudRetUnsup = 6,	/* unsupported function encoding */
+
+		[ helpcontext(H_RETCODE), helpstring("Output file exists") ]
+		uudRetExists = 7,	/* file exists decoding */
+
+//		[ helpcontext(H_RETCODE), helpstring("") ]
+//		uudRetCont = 8,		/* continue -- special from ScanPart */
+
+		[ helpcontext(H_RETCODE), helpstring("Operation canceled by user") ]
+		uudRetCancel = 9	/* operation canceled */
+		} ReturnCodes;
+
+	[ uuid(6BF727DD-E0B7-4dac-BFA5-77C54FA74633),
+	  helpcontext(DFileStatus_Constants), 
+      helpstring("Decode File Status Mask") ]
+	typedef enum {				// File Status Mask
+		[ helpcontext(DFileStatus_Constants), helpstring("Read in") ]
+		uudFileRead = 0,		/* Read in, but not further processed */
+
+		[ helpcontext(DFileStatus_Constants), helpstring("Missing parts detected") ]
+		uudFileMisPart = 1,		/* Missing Parts detected */
+
+		[ helpcontext(DFileStatus_Constants), helpstring("No 'begin' found") ]
+		uudFileNoBegin = 2,		/* No 'begin' found */
+
+		[ helpcontext(DFileStatus_Constants), helpstring("No 'end' found") ]
+		uudFileNoEnd = 4,		/* No 'end' found */
+
+		[ helpcontext(DFileStatus_Constants), helpstring("No data found") ]
+		uudFileNoData = 8,		/* File does not contain valid uudata */
+
+		[ helpcontext(DFileStatus_Constants), helpstring("Ready to decode") ]
+		uudFileOK = 16,			/* All Parts found, ready to decode */
+
+		[ helpcontext(DFileStatus_Constants), helpstring("Error while decoding") ]
+		uudFileError = 32,		/* Error while decoding */
+
+		[ helpcontext(DFileStatus_Constants), helpstring("Decoded OK") ]
+		uudFileDecoded = 64,	/* Successfully decoded */
+
+		[ helpcontext(DFileStatus_Constants), helpstring("Temporary file exists") ]
+		uudFileTmpFile = 128,	/* Temporary decoded file exists */
+
+		[ helpcontext(DFileStatus_Constants), helpstring("Filename was generated by the control") ]
+		uudFileGenFn = 256
+		} DFileStatus;
+
+	[ uuid(CD6E061A-9C35-434f-9272-62B857667DBE),
+	  helpcontext(Progress_Codes), 
+      helpstring("Progress Event Action Codes") ]
+	typedef enum {			// Action codes
+		[ helpcontext(Progress_Codes), helpstring("No action") ]
+		uudActIdle = 0,		/* we don't do anything */
+
+		[ helpcontext(Progress_Codes), helpstring("Scanning input file") ]
+		uudActScanning = 1,	/* scanning an input file */
+
+		[ helpcontext(Progress_Codes), helpstring("Decoding") ]
+		uudActDecoding = 2,	/* decoding into a temp file */
+
+		[ helpcontext(Progress_Codes), helpstring("Copying file to target") ]
+		uudActCopying = 3,	/* copying temp to target */
+
+		[ helpcontext(Progress_Codes), helpstring("Encoding") ]
+		uudActEncoding = 4,	/* encoding a file */
+
+		[ helpcontext(Progress_Codes), helpstring("Starting new step") ]
+		uudActNewStep = 9
+		} ProgressCodes;
+
+	[ uuid(4EEC4515-7153-43e8-852F-69F27B8C47EC),
+	  helpcontext(DFileDetail_Constants), 
+      helpstring("DFileDetail Item Selectors") ]
+	typedef enum {				// DFileDetail constants
+		[ helpcontext(DFileDetail_Constants), helpstring("Status of part") ]
+		uudLDState = 0,			// uulist.state
+
+		[ helpcontext(DFileDetail_Constants), helpstring("File permissions on 'begin' line") ]
+		uudLDMode = 1,			// uulist.mode
+
+		[ helpcontext(DFileDetail_Constants), helpstring("Part number where 'begin' was detected") ]
+		uudLDBegin = 2,			// uulist.begin
+
+		[ helpcontext(DFileDetail_Constants), helpstring("Part number where 'end' was detected") ]
+		uudLDEnd = 3,			// uulist.end
+
+		[ helpcontext(DFileDetail_Constants), helpstring("Encoding mode") ]
+		uudLDUuDet = 4,			// uulist.uudet
+
+		[ helpcontext(DFileDetail_Constants), helpstring("Status flags") ]
+		uudLDFlags = 5,			// uulist.flags
+
+		[ helpcontext(DFileDetail_Constants), helpstring("Approx. size of resulting file") ]
+		uudLDSize = 6,			// uulist.size
+
+		[ helpcontext(DFileDetail_Constants), helpstring("Filename") ]
+		uudLDFileName = 7,		// uulist.filename
+
+		[ helpcontext(DFileDetail_Constants), helpstring("Subject: line") ]
+		uudLDSubF = 8,			// uulist.subfname
+
+		[ helpcontext(DFileDetail_Constants), helpstring("MIME-ID, if any") ]
+		uudLDMIMEID = 9,		// uulist.mimeid
+
+		[ helpcontext(DFileDetail_Constants), helpstring("MIME type") ]
+		uudLDMIMEType = 10,		// uulist.mimetype
+
+		[ helpcontext(DFileDetail_Constants), helpstring("Name of temp file") ]
+		uudLDBinFile = 11,		// uulist.binfile
+
+		[ helpcontext(DFileDetail_Constants), helpstring("List of parts found [SubIndex]") ]
+		uudLDHavePart = 12,		// uulist.haveparts[subscr]
+
+		[ helpcontext(DFileDetail_Constants), helpstring("List of missing parts [SubIndex]") ]
+		uudLDMissPart = 13,		// uulist.msparts[subscr]
+
+		[ helpcontext(DFileDetail_Constants), helpstring("List of parts in this file [SubIndex]") ]
+		uudLDUFPart = 14,		// uulist.thisfile[subscr].partno
+
+		[ helpcontext(DFileDetail_Constants), helpstring("Subject: line of component file [SubIndex]") ]
+		uudLDUFrSubj = 15,		// uulist.thisfile[subscr].data.subject
+
+		[ helpcontext(DFileDetail_Constants), helpstring("From: line of component file [SubIndex]") ]
+		uudLDUFrOrg = 16,		// uulist.thisfile[subscr].data.origin
+
+		[ helpcontext(DFileDetail_Constants), helpstring("Filename from component file [SubIndex]") ]
+		uudLDUFrSFN = 17,		// uulist.thisfile[subscr].data.sfname
+
+		[ helpcontext(DFileDetail_Constants), helpstring("Starting position component file [SubIndex]") ]
+		uudLDUFrStart = 18,		// uulist.thisfile[subscr].data.startpos
+
+		[ helpcontext(DFileDetail_Constants), helpstring("Length from component file [SubIndex]") ]
+		uudLDUFrLength = 19,	// uulist.thisfile[subscr].data.length
+
+		[ helpcontext(DFileDetail_Constants), helpstring("Number of component files") ]
+		uudLDUFrCount = 20		// Number of subparts
+		} DFileDetailItems;
+
+	[ uuid(C65096E7-361A-424a-8C24-EF312F6AA03D),
+	  helpcontext(Encoding_Modes),
+      helpstring("Encoding Modes") ]
+	typedef enum {				// Encoding mode constants
+		[ helpcontext(Encoding_Modes), helpstring("UU Encoding") ]
+		uudEncUU = 1,	/* UUencoded data   */
+
+		[ helpcontext(Encoding_Modes), helpstring("Base64 Encoding") ]
+		uudEncB64 = 2,	/* Mime-Base64 data */
+
+		[ helpcontext(Encoding_Modes), helpstring("XX Encoding") ]
+		uudEncXX = 3,	/* XXencoded data   */
+
+		[ helpcontext(Encoding_Modes), helpstring("BinHex Encoding") ]
+		uudEncBinHex = 4,	/* Binhex encoded   */
+
+		[ helpcontext(Encoding_Modes), helpstring("Plain Text") ]
+		uudEncPlainText = 5,	/* Plain-Text encoded (MIME) */
+
+		[ helpcontext(Encoding_Modes), helpstring("Quoted-Printable") ]
+		uudEncQuotedPrintable = 6,	/* Quoted-Printable (MIME)   */
+
+		[ helpcontext(Encoding_Modes), helpstring("yEnc Encoding") ]
+		uudEncyEnc = 7	/* yEnc Encoding */
+		} EncodeModes;
+
+	[ uuid(66979A5C-8BCC-4e32-ACB5-4B1C74A79099),
+	  helpcontext(Header_Styles_Constants), 
+      helpstring("Encoding Header Modes") ]
+	typedef enum {				// Encoding mode constants
+		[ helpcontext(Header_Styles_Constants), helpstring("Standard UUDeview headers") ]
+		uudEncHUud = 0,		// No MIME headers (use standard headers)
+
+		[ helpcontext(Header_Styles_Constants), helpstring("Simple MIME headers") ]
+		uudEncHSimple = 1,		// Simple MIME (no addressing)
+
+		[ helpcontext(Header_Styles_Constants), helpstring("MIME E-Mail format") ]
+		uudEncHMail = 2,		// MIME E-mail format
+
+		[ helpcontext(Header_Styles_Constants), helpstring("MIME News format") ]
+		uudEncHNews = 3		// MIME News format
+		} EncodeHeaders;
+
+	[ uuid(2E45475E-7F1C-427b-9E57-D2578F099D2F),
+	  helpcontext(ClipFileOperations_Constants), 
+      helpstring("ClipboardFile Operations") ]
+	typedef enum {				// Encoding mode constants
+		[ helpcontext(ClipFileOperations_Constants), helpstring("Load Clipboard from file") ]
+		uudCFcff = 0,
+
+		[ helpcontext(ClipFileOperations_Constants), helpstring("Write Clipboard to new file") ]
+		uudCFc2nf = 1,
+
+		[ helpcontext(ClipFileOperations_Constants), helpstring("Append Clipboard to file") ]
+		uudCFac2f = 2
+		} ClipFileOperations;
+
+	[
+		uuid(18C87066-DCE9-4E71-837C-C9ACB521BE32),
+		helpstring("_IUUEngineEvents Interface")
+	]
+	dispinterface _IUUEngineEvents
+	{
+		properties:
+		methods:
+		[id(1), helpstring("Message event")] void Message([in] BSTR Message, [in] short Level);
+		[id(2), helpstring("Progress event")] void Progress([in] ProgressCodes CurrentAction, [in] BSTR CurrentFile, [in] short PartNo, [in] short TotalParts, [in] long CurrentFileSize, [in] short Percent, [in, out] BOOL *Cancel);
+	};
+
+	[
+		uuid(B0C48BEA-ABEE-4105-8BB1-24D4970C39D8),
+		helpstring("UUEngine Class")
+	]
+	coclass UUEngine
+	{
+		[default] interface IUUEngine;
+		[default, source] dispinterface _IUUEngineEvents;
+	};
+};

@@ -1,0 +1,54 @@
+LIBRARY   UUD16
+EXETYPE   WINDOWS
+CODE      PRELOAD MOVEABLE DISCARDABLE
+DATA      PRELOAD MOVEABLE SINGLE
+HEAPSIZE  1024
+EXPORTS                    
+	UUInitialize
+	UUGetOption
+	UUSetOption
+	UUstrerror
+	UUSetMsgCallback
+	UUSetBusyCallback
+	UUSetFileCallback
+	UUSetFNameFilter
+	UUFNameFilter
+	UUGetFileListItem
+	UULoadFile
+	UURenameFile
+	UUDecodeToTemp
+	UURemoveTemp
+	UUDecodeFile
+	UUInfoFile
+	UUSmerge
+	UUCleanUp
+;	UUEncode    
+;
+; Private functions
+;
+	GetWindowsVer
+	UUVBProgressName
+	UUVBProgressPart
+	UUVBSaveClipboard
+	UUVBLibVersion
+	UUVBCancel                           
+	UUVBOwnerWindow
+	UUVBEncode
+	UUDecodeContextMenu
+	UUVBGetAllInfo
+	UUVBInfoListExists
+	UUVBInfoListGet
+	UUVBGetDecTemp
+	UUVBClipFile
+	UUVBMessage
+	UUVBMessageFIFO
+;	UUEncodeFile
+          WEP PRIVATE
+; To implement your own Windows Exit Procedure add the following
+; function to your application (referring to it in the .def file is
+; not required.)  The extern "C" is only required if module is C++.
+; extern "C" int FAR PASCAL _WEP(int)
+; {
+;       /* Your WEP functionality goes here */
+;  return 1;
+; }

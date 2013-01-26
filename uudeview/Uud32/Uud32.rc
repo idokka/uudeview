@@ -1,0 +1,492 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\Uud32.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 309, 155
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Uud32"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,280,0,25,87,WS_GROUP
+    CONTROL         151,IDC_ABOUTBMP,"Static",SS_BITMAP,0,0,230,105
+    CTEXT           "Static",IDC_ABOUTDLL,0,105,230,10
+END
+
+IDD_UUD32_DIALOG DIALOGEX 0, 0, 309, 232
+STYLE DS_CONTEXTHELP | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_ACCEPTFILES | WS_EX_CONTROLPARENT | WS_EX_APPWINDOW
+CAPTION "Uudeview"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Tab2",IDC_TAB2,"SysTabControl32",WS_TABSTOP,5,10,295,
+                    212
+    PUSHBUTTON      "&Help",IDC_GETHELP,170,5,40,14
+    PUSHBUTTON      "&About",IDC_ABOUTBUTTON,215,5,40,14
+    PUSHBUTTON      "E&xit",IDCANCEL,260,5,40,14
+    PUSHBUTTON      "&Clear",IDC_DEBUGCLEARBUTTON,105,5,40,14,NOT WS_VISIBLE
+END
+
+IDD_DECODE DIALOG DISCARDABLE  0, 0, 312, 196
+STYLE DS_SETFOREGROUND | DS_CONTROL | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Decode these files:",IDC_STATIC,5,5,59,8
+    LISTBOX         IDC_DECODELIST,5,15,130,110,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "&Path:",IDC_DECODEPATHBROWSE,160,15,25,11
+    LTEXT           "To:",IDC_TOLABEL,190,5,11,8
+    COMBOBOX        IDC_DECODEPATH,190,15,115,12,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Preview »",IDC_DECODEGO,140,35,45,17
+    CONTROL         "List2",IDC_DECODEOUTPUTLIST,"SysListView32",LVS_REPORT | 
+                    LVS_SORTASCENDING | LVS_AUTOARRANGE | LVS_EDITLABELS | 
+                    LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,190,30,115,
+                    95
+    PUSHBUTTON      "&Options...",IDC_DECODEOPTIONS,140,60,45,15
+    PUSHBUTTON      "&Clear",IDC_CLEARDECODE,140,85,45,15
+    PUSHBUTTON      "&Add...",IDC_ADDDECODE,5,130,40,15
+    PUSHBUTTON      "Clipboard",IDC_ADDCLIPBOARD,50,130,40,15
+    PUSHBUTTON      "&Remove",IDC_REMOVEDECODE,95,130,40,15
+    PUSHBUTTON      "&Info",IDC_DECODEINFO,190,130,35,15
+    PUSHBUTTON      "Re&name",IDC_RENAMEDECODEOUT,230,130,35,15
+    PUSHBUTTON      "Remo&ve",IDC_REMOVEDECODEOUT,270,130,35,15
+    GROUPBOX        "Information",IDC_DECINFOBOX,5,150,300,40
+    EDITTEXT        IDC_INFO1,10,160,290,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_INFO2,10,175,290,12,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "Progress1",IDC_DECODEPROGRESS,"msctls_progress32",NOT 
+                    WS_VISIBLE | WS_BORDER,10,175,290,10
+    PUSHBUTTON      "Button1",IDC_DEC_CH,155,110,15,15,BS_ICON
+END
+
+IDD_ENCODE DIALOG DISCARDABLE  0, 0, 286, 162
+STYLE DS_SETFOREGROUND | DS_CONTROL | WS_CHILD | WS_VISIBLE | WS_BORDER
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_ENCSRC,5,15,240,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Bro&wse",IDC_ENCSRCBROWSE,250,15,30,12
+    CONTROL         "B&ase 64",IDC_ENC64,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,15,85,65,10
+    CONTROL         "&UU",IDC_ENCUU,"Button",BS_AUTORADIOBUTTON,15,95,65,10
+    CONTROL         "&XX",IDC_ENCXX,"Button",BS_AUTORADIOBUTTON,15,105,65,10
+    CONTROL         "&yEnc",IDC_ENCYY,"Button",BS_AUTORADIOBUTTON,15,115,61,
+                    9
+    PUSHBUTTON      "&Go!",IDC_ENCODEGO,95,80,47,19
+    CONTROL         "&Single File",IDC_ENCSINGLE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,170,85,48,10
+    CONTROL         "B&reak every",IDC_ENCBRK,"Button",BS_AUTORADIOBUTTON,
+                    170,95,50,10
+    CONTROL         "To &Clipboard",IDC_ENCCLIP,"Button",BS_AUTORADIOBUTTON,
+                    170,105,55,10
+    EDITTEXT        IDC_ENCDEST,7,143,240,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Path",IDC_ENCPATH,252,143,30,12
+    LTEXT           "Encode &File:",IDC_STATIC,5,5,55,10
+    GROUPBOX        "Information",IDC_ENCINFOFRAME,5,30,275,40
+    EDITTEXT        IDC_ENCINFO,10,40,265,12,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "Progress1",IDC_ENCPROG,"msctls_progress32",WS_BORDER,10,
+                    55,265,10
+    GROUPBOX        "Encoding Scheme",IDC_SCHEMEFRAME,5,75,80,55
+    GROUPBOX        "Output Mode",IDC_OMFRAME,160,75,120,45
+    EDITTEXT        IDC_ENCLINES,225,95,25,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "lines",IDC_LABELLINES,255,95,15,8,NOT WS_GROUP
+    LTEXT           "&To:",IDC_STATIC,7,133,11,8
+    PUSHBUTTON      "Button1",IDC_ENCGETHELP,110,105,15,15,BS_ICON
+END
+
+IDD_DECODEOPT DIALOG DISCARDABLE  0, 0, 288, 258
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Decode Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,7,236,50,15
+    PUSHBUTTON      "Ca&ncel",IDCANCEL,69,236,50,15
+    CONTROL         "&Fast Mode (one part per file)",IDC_FASTMODE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,25,24,110,10
+    CONTROL         "&Pause on Errors",IDC_POE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,157,24,110,10
+    CONTROL         "&Dumb Mode",IDC_DUMBMODE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,34,110,10
+    CONTROL         "&Show Debug Info",IDC_DEBUG,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,157,34,110,10
+    CONTROL         "A&lternate Bracket Policy",IDC_BRACKPOL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,25,44,110,10
+    CONTROL         "&Hide Tool Tips",IDC_HIDETOOLTIPS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,157,44,110,10
+    CONTROL         "D&esperate Mode",IDC_DESP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,54,110,10
+    CONTROL         "&Associate decodable files",IDC_ASSOC,"Button",
+                    BS_AUTO3STATE | WS_TABSTOP,157,54,110,10
+    CONTROL         "&Ignore Replies",IDC_IGNREPLY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,64,110,10
+    CONTROL         "&Extract Text Files",IDC_ETEXT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,74,110,10
+    CONTROL         "Edit without prompting",IDC_ENOPROMPT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,157,74,107,10
+    CONTROL         "Strict &MIME compliance",IDC_STRICT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,25,84,100,10
+    CONTROL         "Launch without prompting",IDC_LNOPROMPT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,157,84,112,11
+    CONTROL         "Preser&ve filename case",IDC_PRESERVECASE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,25,92,92,13
+    CONTROL         "Decode without prompting",IDC_DNOPROMPT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,157,95,104,11
+    CONTROL         "P&rompt",IDC_OUTFMODEP,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,25,137,38,10
+    CONTROL         "&Overwrite",IDC_OUTFMODEO,"Button",BS_AUTORADIOBUTTON,
+                    25,150,46,10
+    CONTROL         "A&utoNumber",IDC_OUTFMODEA,"Button",BS_AUTORADIOBUTTON,
+                    25,162,55,10
+    CONTROL         "Rec&ycle successfully",IDC_RECYCLEINP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,156,137,82,10
+    PUSHBUTTON      "Def&aults",IDC_DECOPTDEFAULT,171,236,50,15
+    PUSHBUTTON      "&Help",IDC_DECOPTHELP,231,236,50,15
+    LTEXT           "with UUDeview",IDC_STATIC,169,64,100,10
+    GROUPBOX        "Decoding",IDC_STATIC,13,11,124,108
+    GROUPBOX        "Duplicate Output Files",IDC_STATIC,13,123,124,57
+    GROUPBOX        "User Interface",IDC_STATIC,147,11,125,108
+    GROUPBOX        "Decoded Input Files",IDC_STATIC,147,123,124,57
+    LTEXT           "decoded input files",IDC_STATIC,168,146,97,19
+    GROUPBOX        "Temporary Files",IDC_STATIC,13,185,259,45
+    CONTROL         "Windows Temp Folder",IDC_WINTEMP,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,25,198,107,12
+    CONTROL         "Other",IDC_OTHERTEMP,"Button",BS_AUTORADIOBUTTON,156,
+                    198,56,11
+    EDITTEXT        IDC_TEMPFOLDER,26,211,235,12,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    PUSHBUTTON      "Browse",IDC_BROWSETEMP,219,196,42,11,WS_DISABLED
+    CONTROL         "Strict Filename parsing",IDC_STRICTFILENAMES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,25,104,104,9
+END
+
+IDD_INFODIALOG DIALOG DISCARDABLE  0, 0, 249, 147
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Information"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Cl&ose",IDOK,5,5,35,15
+    PUSHBUTTON      "&Help",IDC_INFOHELP,45,5,35,15
+    EDITTEXT        IDC_INFOTITLE,85,7,160,10,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_INFOEDIT,5,25,240,115,ES_MULTILINE | ES_READONLY | 
+                    WS_VSCROLL
+END
+
+IDD_DEBUGDIALOG DIALOG DISCARDABLE  0, 0, 249, 147
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "UUDeview Debug Information"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Cl&ose",IDOK,5,5,45,15
+    PUSHBUTTON      "&Clear",IDC_CLEARDEBUG,70,5,45,15
+    PUSHBUTTON      "» C&lipboard",IDC_DEB2CLIP,135,5,45,15
+    PUSHBUTTON      "&Help",IDC_INFOHELP,200,5,45,15
+    EDITTEXT        IDC_INFODEBUG,5,25,240,115,ES_MULTILINE | ES_READONLY | 
+                    WS_VSCROLL | WS_HSCROLL
+END
+
+IDD_RENAMEDIALOG DIALOG DISCARDABLE  0, 214, 196, 82
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Rename Output File"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_RENFILENAME,5,5,186,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Auto",IDC_ANUMBER,31,36,41,16
+    PUSHBUTTON      "&Rename",IDC_RENBUTTON,76,36,41,16,WS_DISABLED
+    DEFPUSHBUTTON   "&Overwrite",IDC_RENOWBUTTON,121,36,41,16
+    PUSHBUTTON      "&Skip",IDC_RENSKIPBUTTON,31,57,41,16
+    PUSHBUTTON      "Rese&t",IDC_RENREST,76,57,41,16,WS_DISABLED
+    PUSHBUTTON      "&Cancel",IDC_RENOUTCANCEL,121,57,41,16
+    CTEXT           "already exists. Do you want to:",IDC_STATIC,5,20,185,8,
+                    NOT WS_GROUP
+END
+
+IDD_LAUNCHDIALOG DIALOG DISCARDABLE  65, 40, 246, 73
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Launch"
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        IDC_LAUNCHLIST,32,20,168,12,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "&Browse",IDC_LAUNCHBROWSE,205,20,36,12,NOT WS_TABSTOP
+    CONTROL         "&Skip this dialog box",IDC_SKIPLAUNCH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,32,35,167,13
+    PUSHBUTTON      "&OK",IDOK,95,51,41,16,NOT WS_TABSTOP
+    PUSHBUTTON      "OK to &All",IDC_LAUNCHALL,145,51,46,16,NOT WS_TABSTOP
+    PUSHBUTTON      "Ca&ncel",IDCANCEL,200,51,41,16,NOT WS_TABSTOP
+    PUSHBUTTON      "&Help",IDC_LAUNCHHELP,5,51,41,16,NOT WS_TABSTOP
+    LTEXT           "Launch:",IDC_STATIC,5,7,24,8
+    LTEXT           "Using:",IDC_STATIC,5,20,20,8
+    EDITTEXT        IDC_LAUNCHNAME,32,5,208,12,ES_AUTOHSCROLL | ES_READONLY
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,4,0,0
+ PRODUCTVERSION 1,4,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "UUDeview-32 1.4\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Uudeview-32\0"
+            VALUE "FileVersion", "1, 4, 0, 0\0"
+            VALUE "InternalName", "Uud32\0"
+            VALUE "LegalCopyright", "Copyright (C) 1997,2001 Michael Newcomb and Frank Pilhofer\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "Uud32.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Uudeview 1.3 32-bit\0"
+            VALUE "ProductVersion", "1, 4, 0, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 302
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 148
+    END
+
+    IDD_UUD32_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 302
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 225
+    END
+
+    IDD_DECODE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 305
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 189
+    END
+
+    IDD_ENCODE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 279
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 155
+    END
+
+    IDD_DECODEOPT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 281
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 251
+    END
+
+    IDD_INFODIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 242
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 140
+    END
+
+    IDD_DEBUGDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 242
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 140
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_UUDICON             ICON    DISCARDABLE     "uudeview.ico"
+IDI_INFOICON            ICON    DISCARDABLE     "info.ico"
+IDI_UUDEBUG             ICON    DISCARDABLE     "uudeb.ico"
+IDI_QMARK               ICON    DISCARDABLE     "qmark.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_STATUSBLOTS         BITMAP  DISCARDABLE     "pclip1.bmp"
+IDB_ABOUT               BITMAP  DISCARDABLE     "About.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCEL ACCELERATORS DISCARDABLE 
+BEGIN
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_MN_HELP             CURSOR  DISCARDABLE     "HELP.CUR"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About Uud32..."
+    IDS_DIS_CLEAR           "Use the Add button to add some files to decode. Changes to ""Preview"""
+    IDS_DIS_PREVIEW         "Click this button to find the encoded files. Changes to ""Go"""
+    IDS_DIS_GO              "Click to decode files"
+    IDS_DIS_DONE            "Click ""Clear"" to start over"
+    IDS_DEC_CH              "Get Help on decoding controls"
+    IDS_GETHELP             "Open UUDeview's online help"
+    IDS_IDCANCEL            "Close UUDeview"
+    IDS_ABOUTBUTTON         "Show UUDeview's version, etc."
+    IDS_ENCGETHELP          "Get help about encoding controls"
+    IDS_CANCEL              "Cancelled."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_NOTHING_DECODE      "Nothing found to decode."
+    IDS_NOFIND_DECODE       "UUDeview didn't find anything to decode."
+    IDS_PREVIEW             "&Preview »"
+    IDS_CANCELBUTTON        "Ca&ncel"
+    IDS_GO                  "&Go!"
+    IDS_BADFLS              "Bad file list subscript"
+    IDS_OOM                 "Out of Memory"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\Uud32.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

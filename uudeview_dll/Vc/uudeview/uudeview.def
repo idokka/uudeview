@@ -1,0 +1,61 @@
+LIBRARY	UUDEVIEW
+
+VERSION 1.0
+
+;
+EXPORTS
+;
+; UUDeview Library exports
+	UUInitialize
+	UUGetOption
+	UUSetOption
+	UUstrerror
+	UUSetMsgCallback
+	UUSetBusyCallback
+	UUSetFileCallback
+	UUSetFNameFilter
+	UUFNameFilter
+	UUGetFileListItem
+	UULoadFile
+	UURenameFile
+	UUDecodeToTemp
+	UURemoveTemp
+	UUDecodeFile
+	UUInfoFile
+	UUSmerge
+	UUCleanUp
+	UUEncodeMulti
+	UUEncodePartial
+	UUEncodeToStream
+	UUEncodeToFile
+	UUE_PrepSingle
+	UUE_PrepPartial
+;
+; MikeN Addition exports
+	UUDecodeOptionMenu
+	UUVBInit
+	UUVBShutdown
+	UUVBMessage
+	UUVBListWalk
+	UUVBListFirst
+	UUVBListDelete
+	UUVBFileFilter
+	UUVBGetInfo
+	UUVBDecode
+	UUAddOptionMenu
+	UUVBStringToFile
+	UUVBGetOption
+	UUVBLibVersion
+	UUVBEncode
+	UUVBListData
+	UUVBOwnerWindow
+	UUVBPercent
+	UUVBProgressPart
+	GetWindowsVer
+	UUVBCancel
+	UUVBGetAllInfo
+	UUVBInfoListExists
+	UUVBInfoListGet
+	FPOpen
+	FPClose
+	UUVBIdentifyOwner

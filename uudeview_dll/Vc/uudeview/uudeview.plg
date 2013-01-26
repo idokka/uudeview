@@ -1,0 +1,44 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: uudeview - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "h:\temp\RSPDD.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /I "..\..\Vc16\UUD16" /I "." /I "H:\My Documents\Utilities\Vc16\UUD16" /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "HAVE_CONFIG_H" /Fp".\Release/uudeview.pch" /YX /Fo".\Release/" /Fd".\Release/" /FD /c 
+"H:\My Documents\Utilities\Vc16\Uud16\Uuvb.c"
+]
+Creating command line "cl.exe @h:\temp\RSPDD.tmp" 
+Creating temporary file "h:\temp\RSPDE.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /incremental:no /pdb:".\Release/uudeview.pdb" /machine:I386 /def:".\uudeview.def" /out:".\Release/uudeview.dll" /implib:".\Release/uudeview.lib" 
+".\Release\fptools.obj"
+".\Release\uucheck.obj"
+".\Release\uuencode.obj"
+".\Release\uulib.obj"
+".\Release\uunconc.obj"
+".\Release\uuscan.obj"
+".\Release\uustring.obj"
+".\Release\uuutil.obj"
+".\Release\uudw32.obj"
+".\Release\Uuvb.obj"
+".\Release\uudeview.res"
+".\Release\crc32.obj"
+]
+Creating command line "link.exe @h:\temp\RSPDE.tmp"
+<h3>Output Window</h3>
+Compiling...
+Uuvb.c
+Linking...
+   Creating library .\Release/uudeview.lib and object .\Release/uudeview.exp
+
+
+
+<h3>Results</h3>
+uudeview.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

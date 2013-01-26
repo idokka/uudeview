@@ -1,0 +1,26 @@
+HKCR
+{
+	UudATL.UUEngine.1 = s 'UUEngine Class'
+	{
+		CLSID = s '{B0C48BEA-ABEE-4105-8BB1-24D4970C39D8}'
+	}
+	UudATL.UUEngine = s 'UUEngine Class'
+	{
+		CLSID = s '{B0C48BEA-ABEE-4105-8BB1-24D4970C39D8}'
+		CurVer = s 'UudATL.UUEngine.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {B0C48BEA-ABEE-4105-8BB1-24D4970C39D8} = s 'UUEngine Class'
+		{
+			ProgID = s 'UudATL.UUEngine.1'
+			VersionIndependentProgID = s 'UudATL.UUEngine'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{B2BBD34E-7348-4C7C-A355-63EA0E99A3ED}'
+		}
+	}
+}

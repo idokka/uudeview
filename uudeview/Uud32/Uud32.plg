@@ -1,0 +1,61 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Uud32 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/Uud32.res" /d "NDEBUG" "H:\My Documents\Utilities\Vc\Uud32\Uud32.rc"" 
+Creating temporary file "h:\temp\RSP597B.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/Uud32.pdb" /machine:I386 /out:"Release/Uud32.exe" 
+".\Release\fptools.obj"
+".\Release\mapdfile.obj"
+".\Release\uucheck.obj"
+".\Release\uudcore.obj"
+".\Release\uuencode.obj"
+".\Release\uulib.obj"
+".\Release\uunconc.obj"
+".\Release\uuscan.obj"
+".\Release\uustring.obj"
+".\Release\uuutil.obj"
+".\Release\methods.obj"
+".\Release\props.obj"
+".\Release\Uud32acxCtl.obj"
+".\Release\xfile.obj"
+".\Release\AboutBox.obj"
+".\Release\DebugDialog.obj"
+".\Release\DecodeDlg.obj"
+".\Release\DecodeOn.obj"
+".\Release\DecodeOptions.obj"
+".\Release\EncodeDlg.obj"
+".\Release\Engine.obj"
+".\Release\FileName.obj"
+".\Release\InfoDialog.obj"
+".\Release\LaunchDialog.obj"
+".\Release\MikeNButton.obj"
+".\Release\MikeNListCtrl.obj"
+".\Release\MikeNPopupMenu.obj"
+".\Release\MyListBox.obj"
+".\Release\RegIni.obj"
+".\Release\RenOutFile.obj"
+".\Release\SizeDialog.obj"
+".\Release\StdAfx.obj"
+".\Release\Uud32.obj"
+".\Release\Uud32Dlg.obj"
+".\Release\UUDCommand.obj"
+".\Release\Uud32.res"
+]
+Creating command line "link.exe @h:\temp\RSP597B.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Linking...
+
+
+
+<h3>Results</h3>
+Uud32.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
